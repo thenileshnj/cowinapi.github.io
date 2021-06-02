@@ -27,7 +27,6 @@ async function getState() {
         btns.innerText = listState.states[i].state_name;
         btns.classList.add('btn');
         btns.classList.add('m-2');
-        btns.classList.add('btn-success');
         btns.classList.add('btn-outline-warning');
         // btns.setAttribute("href", "./selectDist.html");
         function somefunc(index) {
@@ -57,7 +56,6 @@ async function getState() {
                         dbtns.innerText = listDist.districts[i].district_name;
                         dbtns.classList.add('btn');
                         dbtns.classList.add('m-2');
-                        dbtns.classList.add('btn-success');
                         dbtns.classList.add('btn-outline-warning');
                         function somefunc2(index) {
                             dbtns.addEventListener("click", function () {
