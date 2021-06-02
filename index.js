@@ -73,7 +73,7 @@ async function getState() {
                                     console.log("hello");
                                     console.log(listCenters.sessions);
                                     const listOfCenters = listCenters.sessions;
-                                    console.log(listOfCenters[1].name);
+                                    // console.log(listOfCenters[1].name);
 
                                     displayStateL.innerHTML = "";
                                     dbtns.addEventListener("click", function () {
