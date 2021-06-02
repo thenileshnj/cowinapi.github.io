@@ -75,8 +75,8 @@ async function getState() {
                                     const listOfCenters = listCenters.sessions;
                                     // console.log(listOfCenters[1].name);
 
-                                    displayStateL.innerHTML = "";
                                     dbtns.addEventListener("click", function () {
+                                        displayStateL.innerHTML = "";
                                         if (listOfCenters.length == 0) {
                                             addCenters.innerHTML = `<p>Sorry, data not available please try another pin coder</p>`;
                                         }
@@ -99,10 +99,10 @@ async function getState() {
                                               </ul>
                                             </div>
                                           </div>
-                                            `;
-                                            console.log(listOfCenters[i].name);
+                                            `
+                                                console.log(listOfCenters[i].name);
 
-                                            addCenters.innerHTML += dataCards;
+                                                addCenters.innerHTML += dataCards;
 
                                             }
                                         }
