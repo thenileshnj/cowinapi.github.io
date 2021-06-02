@@ -2,7 +2,12 @@ const displayStateL = document.getElementById("displayStateL");
 const addCenters = document.getElementById("addCenters");
 
 
-
+date = new Date();
+var d = date.getDate();
+// d = 28;
+var m = date.getMonth();
+// m = 5;
+var y = date.getFullYear();
 // function to get list of states
 async function getState() {
     const states = await fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states");
@@ -22,7 +27,8 @@ async function getState() {
         btns.innerText = listState.states[i].state_name;
         btns.classList.add('btn');
         btns.classList.add('m-2');
-        btns.classList.add('btn-primary');
+        btns.classList.add('btn-success');
+        btns.classList.add('btn-outline-warning');
         // btns.setAttribute("href", "./selectDist.html");
         function somefunc(index) {
             btns.addEventListener("click", function () {
@@ -51,7 +57,8 @@ async function getState() {
                         dbtns.innerText = listDist.districts[i].district_name;
                         dbtns.classList.add('btn');
                         dbtns.classList.add('m-2');
-                        dbtns.classList.add('btn-primary');
+                        dbtns.classList.add('btn-success');
+                        dbtns.classList.add('btn-outline-warning');
                         function somefunc2(index) {
                             dbtns.addEventListener("click", function () {
                                 const distID = listDist.districts[index].district_id;
@@ -62,7 +69,7 @@ async function getState() {
                                 // function to get center details
                                 async function getCenter() {
                                     const dID = distID;
-                                    const centers = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${dID}&date=29-05-2021`);
+                                    const centers = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${dID}&date=${d}-${m}-${y}`);
                                     // console.log(centers);
                                     const listCenters = await centers.json();
                                     console.log("hello");
