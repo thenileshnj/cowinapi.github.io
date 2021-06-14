@@ -75,16 +75,15 @@ async function getState() {
                                     const listOfCenters = listCenters.sessions;
                                     // console.log(listOfCenters[1].name);
 
-                                    dbtns.addEventListener("click", function () {
-                                        displayStateL.innerHTML = "";
-                                        if (listOfCenters.length == 0) {
-                                            addCenters.innerHTML = `<p>Sorry, data not available please try another pin coder</p>`;
-                                        }
+                                    displayStateL.innerHTML = "";
+                                    if (listOfCenters.length == 0) {
+                                        addCenters.innerHTML = `<p>Sorry, data not available please try another pin coder</p>`;
+                                    }
 
-                                        else {
-                                            // addCenters.innerHTML = "";
-                                            for (let i = 0; i < listOfCenters.length; i++) {
-                                                dataCards = `
+                                    else {
+                                        // addCenters.innerHTML = "";
+                                        for (let i = 0; i < listOfCenters.length; i++) {
+                                            dataCards = `
                                             <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 m-2">
                                             <div class="card border-info" >
                                               <ul class="list-group list-group-flush">
@@ -100,13 +99,12 @@ async function getState() {
                                             </div>
                                           </div>
                                             `
-                                                console.log(listOfCenters[i].name);
+                                            console.log(listOfCenters[i].name);
 
-                                                addCenters.innerHTML += dataCards;
+                                            addCenters.innerHTML += dataCards;
 
-                                            }
                                         }
-                                    })
+                                    }
 
                                 }
 
